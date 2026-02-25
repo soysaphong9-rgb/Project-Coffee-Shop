@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee shop</title>
+    <!-- link css bootstrap -->
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
+    <!-- script js bootstrap -->
+    <script src="Bootstrap/js/bootstrap.min.js"></script>
+    <!-- link cdn icon bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- link header css -->
+    <link rel="stylesheet" href="style/header.css">
+    <!-- link main css -->
+    <link rel="stylesheet" href="style/banner.css">
+</head>
+<body>
+    <!-- header -->
+     <header class="container-fluid py-1">
+        <nav class="container navbar h-100">
+            <!-- logo -->
+            <a href="" class="navbar-brand fs-3 text-light 25 fw-bold">Phong</a>
+            <!-- menu -->
+            <ul class="nav d-none d-lg-flex">
+                <li><a href="#banner" class="nav-link fs-5 text-light mx-3 text-uppercase">Home</a></li>
+                <li><a href="#about" class="nav-link fs-5 text-light mx-3 text-uppercase">About</a></li>
+                <li><a href="#service" class="nav-link fs-5 text-light mx-3 text-uppercase">Service</a></li>
+                <li><a href="#contact" class="nav-link fs-5 text-light mx-3 text-uppercase">Contact</a></li>
+            </ul>
+            <!-- sesrch  and iocn-->
+            <div class="d-flex align-items-center gap-2 d-none d-lg-flex" >
+                <!-- input search -->
+                <input type="text" placeholder="search" id="box-search" class="form-control shadow-none rounded-5">
+                <!-- icon -->
+                <i class="bi bi-cart2 text-light p-2 py-1 rounded-1 fs-5 "></i>
+            </div>
+            <!-- icon sidbar -->
+            <i class="bi bi-list fs-1 text-light d-lg-none d-flex" data-bs-target="#sidbar" data-bs-toggle="offcanvas" ></i>
+            <!-- sidbar -->
+            <div class="offcanvas w-75 d-lg-none offcanvas-start" data-bs-scroll="true" tabindex="-1" id="sidbar" aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas-header border-bottom py-sm-3 ">   
+                    <h3 class="text-light">Coffee Shop</h3>
+                    <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body bg-primary p-0">
+                    <ul class="nav flex-column">
+                        <lipy-3"><a href="" class="nav-link text-light fs-4">
+                            <i class="bi bi-house me-2"></i>Home</a>
+                        </li>
+                        <lipy-3">
+                            <a href="" class="nav-link text-light fs-4">About Us</a>
+                        </lipy-3>
+                        <lipy-3">
+                            <a href="" class="nav-link text-light fs-4">Service</a>
+                        </lipy-3>
+                        <lipy-3">
+                            <a href="" class="nav-link text-light fs-4">Contact Us</a>
+                        </lipy-3>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+     </header>
+    <!-- main -->
+    <main>
+        <!-- banner -->
+        <div class="container-fluid " id="banner">
+            <div class="container row mx-auto h-100">
+                <!-- bannder left -->
+                <div class="col-12 col-md-6 h-100 d-flex flex-column justify-content-center pe-5">
+                    <h1 class="text-light " id="text-banner">Craft Your perfect Cup</h1>
+                    <p style="color: rgb(110, 107, 107);" class="p-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus, inventore fugiat aliquid deserunt porro veniam ab velit.</p>
+                    <button class="btn btn-warning p-2 col-8 col-md-6 col-lg-4 fs-5" id="text-explore">Explore colection</button>
+                </div>
+                <!-- bannder right -->
+                <div class="col-12 col-md-6 h-50 h-100 d-flex justify-content-center">
+                    <div class="h-50 my-auto">
+                        <img src="assets/image/panda.jpg" alt=""
+                        class="w-100 h-100 img-thumbnail object-fit-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- buuton selec show product -->
+        <div class="container-fluid p-0" style="background-color: rgba(41, 2, 2, 0.893);" id="about">
+            <div class="container row mx-auto py-4 d-flex align-items-center">
+                <!-- title selev -->
+                <div class="col-12 col-md-6 row">
+                    <h3 class="text-light">Our Selecion</h3>
+                    <p class="text-light m-0"> 20 product</p>
+                </div>
+                <!-- button option -->
+                <div class="col-12 col-md-6 d-flex justify-content-center gap-3">
+                    <!-- list button -->
+                    <ul class="nav nav-tabs" id="myTab" role="tablist" >
+                        <li role="presentation">
+                            <button class="nav-link active"d id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
+                        </li>
+                        <li role="presentation">
+                            <button class="nav-link" id="coffee-tab" data-bs-toggle="tab" data-bs-target="#coffee" type="button" role="tab" aria-controls="coffee" aria-selected="false">Coffee</button>
+                        </li>
+                        <li role="presentation">
+                            <button class="nav-link" id="milktea-tab" data-bs-toggle="tab" data-bs-target="#milktea" type="button" role="tab" aria-controls="milktea" aria-selected="false">Milk tea</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- main-content-tab -->
+            <div class="content p-3 bg-gradient z-3">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active container" id="all" role="tabpanel" aria-labelledby="all-tab" tabindex="0">
+                        <!-- header -->
+                        <h1 class="text-light text-decoration-underline">All product</h1>
+                        <!-- main card -->
+                        <div class="row py-5 h-100">
+                            <!-- main card -->
+                            <div class="row py-4 m-0">
+                                <!-- card -->
+                                <div class="col-12 col-md-6 col-lg-3" style="height: 480px;">
+                                    <div class="card h-100">
+                                        <!-- card img -->
+                                         
+                                        <div class="card-header " style="height: 60%;">
+                                            <img src="assets/image/coffee-1.jpg" class="h-100 w-100 object-fit-contain" alt="">
+                                        </div>
+                                        <!-- card title -->
+                                        <div class="card-body">
+                                            <h4>coffee</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="btn btn-info px-3">5$</button>
+                                                <button class="btn btn-info px-3">Buy now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- card -->
+                                <div class="col-12 col-md-6 col-lg-3" style="height: 480px;">
+                                    <div class="card h-100">
+                                        <!-- card img -->
+                                         
+                                        <div class="card-header " style="height: 60%;">
+                                            <img src="assets/image/coffee-1.jpg" class="h-100 w-100 object-fit-contain" alt="">
+                                        </div>
+                                        <!-- card title -->
+                                        <div class="card-body">
+                                            <h4>coffee</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="btn btn-info px-3">5$</button>
+                                                <button class="btn btn-info px-3">Buy now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- card -->
+                                <div class="col-12 col-md-6 col-lg-3" style="height: 480px;">
+                                    <div class="card h-100">
+                                        <!-- card img -->
+                                         
+                                        <div class="card-header " style="height: 60%;">
+                                            <img src="assets/image/coffee-1.jpg" class="h-100 w-100 object-fit-contain" alt="">
+                                        </div>
+                                        <!-- card title -->
+                                        <div class="card-body">
+                                            <h4>coffee</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="btn btn-info px-3">5$</button>
+                                                <button class="btn btn-info px-3">Buy now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- card -->
+                                <div class="col-12 col-md-6 col-lg-3" style="height: 480px;">
+                                    <div class="card h-100">
+                                        <!-- card img -->
+                                         
+                                        <div class="card-header " style="height: 60%;">
+                                            <img src="assets/image/coffee-1.jpg" class="h-100 w-100 object-fit-contain" alt="">
+                                        </div>
+                                        <!-- card title -->
+                                        <div class="card-body">
+                                            <h4>coffee</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="btn btn-info px-3">5$</button>
+                                                <button class="btn btn-info px-3">Buy now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                         <h1 class="text-light text-decoration-underline">Milk tea</h1>
+                        <!-- main card -->
+                        <div class="row py-5 h-100">
+                            <!-- main card -->
+                            <div class="row py-4 m-0">
+                                <!-- card -->
+                                <div class="col-12 col-md-6 col-lg-3" style="height: 480px;">
+                                    <div class="card h-100">
+                                        <!-- card img -->
+                                         
+                                        <div class="card-header " style="height: 60%;">
+                                            <img src="assets/image/milk-tea.jpg" class="h-100 w-100 object-fit-contain" alt="">
+                                        </div>
+                                        <!-- card title -->
+                                        <div class="card-body">
+                                            <h4>Milk tea</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="btn btn-info px-3">5$</button>
+                                                <button class="btn btn-info px-3">Buy now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- card -->
+                                <div class="col-12 col-md-6 col-lg-3" style="height: 480px;">
+                                    <div class="card h-100">
+                                        <!-- card img -->
+                                         
+                                        <div class="card-header " style="height: 60%;">
+                                            <img src="assets/image/milk-tea.jpg" class="h-100 w-100 object-fit-contain" alt="">
+                                        </div>
+                                        <!-- card title -->
+                                        <div class="card-body">
+                                            <h4>Milk tea</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="btn btn-info px-3">5$</button>
+                                                <button class="btn btn-info px-3">Buy now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- card -->
+                                <div class="col-12 col-md-6 col-lg-3" style="height: 480px;">
+                                    <div class="card h-100">
+                                        <!-- card img -->
+                                         
+                                        <div class="card-header " style="height: 60%;">
+                                            <img src="assets/image/milk-tea.jpg" class="h-100 w-100 object-fit-contain" alt="">
+                                        </div>
+                                        <!-- card title -->
+                                        <div class="card-body">
+                                            <h4>Milk tea</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="btn btn-info px-3">5$</button>
+                                                <button class="btn btn-info px-3">Buy now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- card -->
+                                <div class="col-12 col-md-6 col-lg-3" style="height: 480px;">
+                                    <div class="card h-100">
+                                        <!-- card img -->
+                                         
+                                        <div class="card-header " style="height: 60%;">
+                                            <img src="assets/image/milk-tea.jpg" class="h-100 w-100 object-fit-contain" alt="">
+                                        </div>
+                                        <!-- card title -->
+                                        <div class="card-body">
+                                            <h4>Milk tea</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="btn btn-info px-3">5$</button>
+                                                <button class="btn btn-info px-3">Buy now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade container" id="coffee" role="tabpanel" aria-labelledby="coffee-tab" tabindex="0">
+                        <h1 class="text-light text-decoration-underline">Coffee</h1>
+                        <!-- main card -->
+                        <div class="row py-5 h-100">
+                            <!-- main card -->
+                            <div class="row py-4 m-0">
+                                <!-- card -->
+                                <div class="col-12 col-md-6 col-lg-3" style="height: 480px;">
+                                    <div class="card h-100">
+                                        <!-- card img -->
+                                         
+                                        <div class="card-header " style="height: 60%;">
+                                            <img src="assets/image/coffee-1.jpg" class="h-100 w-100 object-fit-contain" alt="">
+                                        </div>
+                                        <!-- card title -->
+                                        <div class="card-body">
+                                            <h4>coffee</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="btn btn-info px-3">5$</button>
+                                                <button class="btn btn-info px-3">Buy now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- card -->
+                                <div class="col-12 col-md-6 col-lg-3" style="height: 480px;">
+                                    <div class="card h-100">
+                                        <!-- card img -->
+                                         
+                                        <div class="card-header " style="height: 60%;">
+                                            <img src="assets/image/coffee-1.jpg" class="h-100 w-100 object-fit-contain" alt="">
+                                        </div>
+                                        <!-- card title -->
+                                        <div class="card-body">
+                                            <h4>coffee</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="btn btn-info px-3">5$</button>
+                                                <button class="btn btn-info px-3">Buy now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- card -->
+                                <div class="col-12 col-md-6 col-lg-3" style="height: 480px;">
+                                    <div class="card h-100">
+                                        <!-- card img -->
+                                         
+                                        <div class="card-header " style="height: 60%;">
+                                            <img src="assets/image/coffee-1.jpg" class="h-100 w-100 object-fit-contain" alt="">
+                                        </div>
+                                        <!-- card title -->
+                                        <div class="card-body">
+                                            <h4>coffee</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="btn btn-info px-3">5$</button>
+                                                <button class="btn btn-info px-3">Buy now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- card -->
+                                <div class="col-12 col-md-6 col-lg-3" style="height: 480px;">
+                                    <div class="card h-100">
+                                        <!-- card img -->
+                                         
+                                        <div class="card-header " style="height: 60%;">
+                                            <img src="assets/image/coffee-1.jpg" class="h-100 w-100 object-fit-contain" alt="">
+                                        </div>
+                                        <!-- card title -->
+                                        <div class="card-body">
+                                            <h4>coffee</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="btn btn-info px-3">5$</button>
+                                                <button class="btn btn-info px-3">Buy now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade container" id="milktea" role="tabpanel" aria-labelledby="milktea-tab" tabindex="0">
+                        <h1 class="text-light text-decoration-underline">Milk tea</h1>
+                        <!-- main card -->
+                        <div class="row py-5 h-100">
+                            <!-- main card -->
+                            <div class="row py-4 m-0">
+                                <!-- card -->
+                                <div class="col-12 col-md-6 col-lg-3" style="height: 480px;">
+                                    <div class="card h-100">
+                                        <!-- card img -->
+                                         
+                                        <div class="card-header " style="height: 60%;">
+                                            <img src="assets/image/milk-tea.jpg" class="h-100 w-100 object-fit-contain" alt="">
+                                        </div>
+                                        <!-- card title -->
+                                        <div class="card-body">
+                                            <h4>Milk tea</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="btn btn-info px-3">5$</button>
+                                                <button class="btn btn-info px-3">Buy now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- card -->
+                                <div class="col-12 col-md-6 col-lg-3" style="height: 480px;">
+                                    <div class="card h-100">
+                                        <!-- card img -->
+                                         
+                                        <div class="card-header " style="height: 60%;">
+                                            <img src="assets/image/milk-tea.jpg" class="h-100 w-100 object-fit-contain" alt="">
+                                        </div>
+                                        <!-- card title -->
+                                        <div class="card-body">
+                                            <h4>Milk tea</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="btn btn-info px-3">5$</button>
+                                                <button class="btn btn-info px-3">Buy now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- card -->
+                                <div class="col-12 col-md-6 col-lg-3" style="height: 480px;">
+                                    <div class="card h-100">
+                                        <!-- card img -->
+                                         
+                                        <div class="card-header " style="height: 60%;">
+                                            <img src="assets/image/milk-tea.jpg" class="h-100 w-100 object-fit-contain" alt="">
+                                        </div>
+                                        <!-- card title -->
+                                        <div class="card-body">
+                                            <h4>Milk tea</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="btn btn-info px-3">5$</button>
+                                                <button class="btn btn-info px-3">Buy now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- card -->
+                                <div class="col-12 col-md-6 col-lg-3" style="height: 480px;">
+                                    <div class="card h-100">
+                                        <!-- card img -->
+                                         
+                                        <div class="card-header " style="height: 60%;">
+                                            <img src="assets/image/milk-tea.jpg" class="h-100 w-100 object-fit-contain" alt="">
+                                        </div>
+                                        <!-- card title -->
+                                        <div class="card-body">
+                                            <h4>Milk tea</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="d-flex justify-content-between">
+                                                <button class="btn btn-info px-3">5$</button>
+                                                <button class="btn btn-info px-3">Buy now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- meet our team -->
+        <div class="container-fluid" style="background-color: rgb(50, 4, 4);" id="service">
+            <!-- desscription -->
+            <div class="container d-flex flex-column align-items-center text-light py-5 px-5 col-md-10 col-lg-7 col-sm-12">
+                <h2>Meet our team</h2>
+                <p class="text-center px-5 py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas dolore, voluptatum iusto voluptate dignissimos sequi totam tempore error eos odio laborum, tenetur voluptas inventore unde soluta minus dicta quasi aliquid quae. Nemo dolorem, reiciendis voluptate placeat rerum recusandae eum architecto saepe, obcaecati, nesciunt dolor suscipit? Officiis eveniet delectus quidem minima!</p>
+            </div>
+            <!-- card profile -->
+            <div class=" p-5 d-flex row flex-column justify-content-between " style="height: 580px; ">
+                <div class="card h-100 col-3 py-4">
+                    <div class="card-header">
+                        <h3>Phong developer</h3>
+                        <p>Position : barista</p>
+                    </div>
+                    <div class="card-body overflow-hidden">
+                        <img src="assets/image/me.png" alt="" class="h1 w-100 object-fit-cover">
+                    </div>
+                </div>
+                <div class="card h-100 col-3 py-4">
+                    <div class="card-header">
+                        <h3>Phong developer</h3>
+                        <p>Position : barista</p>
+                    </div>
+                    <div class="card-body overflow-hidden">
+                        <img src="assets/image/me.png" alt="" class="h1 w-100 object-fit-cover">
+                    </div>
+                </div>
+                <div class="card h-100 col-3 py-4">
+                    <div class="card-header">
+                        <h3>Phong developer</h3>
+                        <p>Position : barista</p>
+                    </div>
+                    <div class="card-body overflow-hidden">
+                        <img src="assets/image/me.png" alt="" class="h1 w-100 object-fit-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- map and contact -->
+        <div class="container-fluid" style="background-color: rgb(50, 4, 4);">
+            <div class="container row p-0 m-auto">
+                <!-- map -->
+                <div class="col-md-6 col-12 ">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4198.877741135785!2d104.89215121087375!3d11.568091344044852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31095173761d4a53%3A0xcd09ff2f4d326e3f!2z4Z6c4Z634Z6R4Z-S4Z6Z4Z624Z6f4Z-S4Z6Q4Z624Z6T4oCLIOGen-GfiuGet-Gej-Get-GegA!5e1!3m2!1skm!2skh!4v1771923286828!5m2!1skm!2skh" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-3" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <!-- contact -->
+                <div class="col-12 col-md-6 p-3 bg-light px-3 rounded-3" id="contact">
+                    <div class="mt-3">
+                        <input type="text" class="form-control fs-3 py-3 shadow-none" placeholder="Your name">
+                    </div>
+                    <div class="mt-4">
+                        <input type="text" class="form-control fs-3 py-3 shadow-none" placeholder="Enter your eamil">
+                    </div>
+                    <div class="mt-4">
+                        <textarea class="form-control col-12" rows="8" placeholder="Your message"></textarea>
+                    </div>
+                    <div class="mt-3">
+                        <button class="btn btn-info w-100 btn-lg">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <!-- footer -->
+    <footer class="container-fluid vh-100" style="background-color: rgb(50, 4, 4);">
+        <div class="container py-5 d-flex px-5">
+            <div class="col-12 col-md-4">
+                <h3 class="text-light fw-bold py-3">Coffee shop</h3>
+                <p class="text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, voluptatem facere harum ea ex aliquam cupiditate porro quibusdam asperiores dolore!</p>
+            </div>
+           
+            <div class="col-12 col-md-4">
+                <h3 class="text-light fw-bold py-3">Coffee shop</h3>
+                <p class="text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, voluptatem facere harum ea ex aliquam cupiditate porro quibusdam asperiores dolore!</p>
+            </div>
+           
+            <div class="col-12 col-md-4">
+                <h3 class="text-light fw-bold py-3">Coffee shop</h3>
+                <p class="text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, voluptatem facere harum ea ex aliquam cupiditate porro quibusdam asperiores dolore!</p>
+                <div class="d-flex">
+                    <input type="text" class="form-control fs-3 shadow-none" placeholder="Your message ">
+                    <i class="bi bi-send bg-info h-100" ></i>  
+                </div>
+            </div>
+           
+        </div>
+    </footer>
+</body>
+</html>
